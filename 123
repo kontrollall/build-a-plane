@@ -58,7 +58,7 @@ Tab:CreateToggle("Buy All", function(enabled)
 			}
 
 			for _, itemName in ipairs(itemsToBuy) do
-				if not buyAllEnabled then break end -- para o loop se o toggle for desligado
+				if not buyAllEnabled then break end
 				pcall(function()
 					ShopEvent:FireServer(itemName)
 					print("Comprado:", itemName)
@@ -69,4 +69,23 @@ Tab:CreateToggle("Buy All", function(enabled)
 			task.wait(0.4)
 		end
 	end)
+end)
+
+
+local Tab = Window:NewSection("Links")
+ 
+Tab:CreateButton("Discord Group", function()
+print("HI")
+ 
+setclipboard("https://discord.gg/8A6k73JqCM")
+toclipboard("https://discord.gg/8A6k73JqCM")
+ 
+end)
+ 
+Tab:CreateButton("Youtube", function()
+print("HI")
+ 
+setclipboard("https://www.youtube.com/@TGMANKASKE")
+toclipboard("https://www.youtube.com/@TGMANKASKE")
+ 
 end)
